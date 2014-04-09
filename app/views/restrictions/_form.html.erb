@@ -1,0 +1,41 @@
+<%= form_for(@restriction) do |f| %>
+  <% if @restriction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@restriction.errors.count, "error") %> prohibited this restriction from being saved:</h2>
+
+      <ul>
+      <% @restriction.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :no_red_meat %><br>
+    <%= f.check_box :no_red_meat %>
+  </div>
+  <div class="field">
+    <%= f.label :ovo_lavto_vegetarian %><br>
+    <%= f.check_box :ovo_lacto_vegetarian %>
+  </div>
+  <div class="field">
+    <%= f.label :vegetarian %><br>
+    <%= f.check_box :vegetarian %>
+  </div>
+  <div class="field">
+    <%= f.label :vegan %><br>
+    <%= f.check_box :vegan %>
+  </div>
+  <div class="field">
+    <%= f.label :glutein_free %><br>
+    <%= f.check_box :glutein_free %>
+  </div>
+  <div class="field">
+    <%= f.label :lactose_free %><br>
+    <%= f.check_box :lactose_free %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no_red_meat: false
+  ovo_lavto_vegetarian: false
+  vegetarian: false
+  vegan: false
+  glutein_free: false
+  lactose_free: false
+
+two:
+  no_red_meat: false
+  ovo_lavto_vegetarian: false
+  vegetarian: false
+  vegan: false
+  glutein_free: false
+  lactose_free: false

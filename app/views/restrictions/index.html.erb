@@ -1,0 +1,37 @@
+<h1>Listing restrictions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>No red meat</th>
+      <th>Ovo lacto vegetarian</th>
+      <th>Vegetarian</th>
+      <th>Vegan</th>
+      <th>Glutein free</th>
+      <th>Lactose free</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restrictions.each do |restriction| %>
+      <tr>
+        <td><%= restriction.no_red_meat %></td>
+        <td><%= restriction.ovo_lacto_vegetarian %></td>
+        <td><%= restriction.vegetarian %></td>
+        <td><%= restriction.vegan %></td>
+        <td><%= restriction.glutein_free %></td>
+        <td><%= restriction.lactose_free %></td>
+        <td><%= link_to 'Show', restriction %></td>
+        <td><%= link_to 'Edit', edit_restriction_path(restriction) %></td>
+        <td><%= link_to 'Destroy', restriction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restriction', new_restriction_path %>

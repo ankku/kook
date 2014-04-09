@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>No red meat:</strong>
+  <%= @restriction.no_red_meat %>
+</p>
+
+<p>
+  <strong>Ovo lavto vegetarian:</strong>
+  <%= @restriction.ovo_lacto_vegetarian %>
+</p>
+
+<p>
+  <strong>Vegetarian:</strong>
+  <%= @restriction.vegetarian %>
+</p>
+
+<p>
+  <strong>Vegan:</strong>
+  <%= @restriction.vegan %>
+</p>
+
+<p>
+  <strong>Glutein free:</strong>
+  <%= @restriction.glutein_free %>
+</p>
+
+<p>
+  <strong>Lactose free:</strong>
+  <%= @restriction.lactose_free %>
+</p>
+
+<%= link_to 'Edit', edit_restriction_path(@restriction) %> |
+<%= link_to 'Back', restrictions_path %>
