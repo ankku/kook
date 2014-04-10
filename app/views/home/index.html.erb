@@ -1,26 +1,39 @@
+<head>
+  <%= stylesheet_link_tag "home", media: "all", "data-turbolinks-track" => true %>
+</head>
 
-<img src="" />
+<div id="top">
+<!--	<%= image_tag("front_image.jpg", style: "max-width: 100%") %> -->
+</div>
 
-<h1>Köök &mdash; a dine-a-mate service.</h1>
-<div id="intro">An easy way to meet new people near you and share a meal together. <br/>
-	KÖÖK helps you do just that.</div>
+<div id="content">
 
-<div id="how_to">
-	<div id="left">
-	<img src="" />
-	<h2>Sign up</h2>
-	<p>Sign up with your Facebook account and set your preferences.</p>
+	<div id="on_image">
+		<h1>Köök &mdash; a dine-a-mate service.</h1>
+		<div id="intro">An easy way to meet new people near you and share a meal together. <br/>
+			KÖÖK helps you do just that.</div>
 	</div>
 
-	<div id="center">
-	<img src="" />
-	<h2>Find events</h2>
-	<p>See what's happening near you or organise an event yourself.</p>
-	</div>
 
-	<div id="right">
-	<img src="" />
-	<h2>Attend</h2>
-	<p>Meet with new people by cooking with them and share your experience.</p>
+	<div id="how_to">
+		<div id="left">
+		<%= image_tag("sign_up.png", height: "100px") %>
+		<h2>Sign up</h2>
+		<p>Sign up with your Facebook account and set your preferences.</p>
+		</div>
+
+		<div id="center">
+		<%= image_tag("find.png", height: "100px") %>
+		<h2>Find events</h2>
+		<p>See what's happening near you or organise an event yourself.</p>
+		</div>
+
+		<div id="right">
+		<%= image_tag("attend.png", height: "100px") %>
+		<h2>Attend</h2>
+		<p>Meet with new people by cooking with them and share your experience.</p>
+		</div>
 	</div>
 </div>
+
+

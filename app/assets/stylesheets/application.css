@@ -28,6 +28,14 @@
 	margin-right: auto;
 }
 
+#front_image {
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	max-width: 500px;
+	height: auto;
+}
+
 body {
 	padding-top: 70px;
 }
@@ -38,14 +46,14 @@ body {
 	margin-right: auto;
 }
 
-footer {
+footer.controller-static_pages {
 	position: absolute;
 	bottom: 0;
 	height: 50px;
 	width: 100%;
 }
 
-#footer_links {
+#footer_links.controller-static_pages {
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
