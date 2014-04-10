@@ -1,4 +1,8 @@
 Kook::Application.routes.draw do
+  resources :events
+
+  resources :event_logos
+
 #  get "static_pages/faq"
 #  get "static_pages/about"
 #  get "static_pages/contact"

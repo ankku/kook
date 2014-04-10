@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140409074816) do
+ActiveRecord::Schema.define(version: 20140409105100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "event_logos", force: true do |t|
+    t.integer  "logo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", force: true do |t|
+    t.text     "title"
+    t.integer  "logo_id"
+    t.date     "date"
+    t.time     "starttime"
+    t.time     "endtime"
+    t.text     "location_city"
+    t.integer  "location_zip"
+    t.integer  "restrictions_id"
+    t.text     "participants"
+    t.text     "price"
+    t.text     "short_description"
+    t.text     "full_description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "restrictions", force: true do |t|
     t.boolean  "no_red_meat"

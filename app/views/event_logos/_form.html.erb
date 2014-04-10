@@ -1,0 +1,21 @@
+<%= form_for(@event_logo) do |f| %>
+  <% if @event_logo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event_logo.errors.count, "error") %> prohibited this event_logo from being saved:</h2>
+
+      <ul>
+      <% @event_logo.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :logo_id %><br>
+    <%= f.number_field :logo_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

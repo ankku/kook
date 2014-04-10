@@ -1,0 +1,1 @@
+json.extract! @event, :id, :title, :logo_id, :date, :starttime, :endtime, :location_city, :location_zip, :restrictions_id, :participants, :price, :short_description, :full_description, :created_at, :updated_at

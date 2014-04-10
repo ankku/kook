@@ -1,0 +1,27 @@
+<h1>Listing event_logos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Logo</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @event_logos.each do |event_logo| %>
+      <tr>
+        <td><%= event_logo.logo_id %></td>
+        <td><%= link_to 'Show', event_logo %></td>
+        <td><%= link_to 'Edit', edit_event_logo_path(event_logo) %></td>
+        <td><%= link_to 'Destroy', event_logo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Event logo', new_event_logo_path %>

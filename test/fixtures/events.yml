@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyText
+  logo_id: 1
+  date: 2014-04-09
+  starttime: 2014-04-09 13:51:00
+  endtime: 2014-04-09 13:51:00
+  location_city: MyText
+  location_zip: 1
+  restrictions_id: 1
+  participants: MyText
+  price: MyText
+  short_description: MyText
+  full_description: MyText
+
+two:
+  title: MyText
+  logo_id: 1
+  date: 2014-04-09
+  starttime: 2014-04-09 13:51:00
+  endtime: 2014-04-09 13:51:00
+  location_city: MyText
+  location_zip: 1
+  restrictions_id: 1
+  participants: MyText
+  price: MyText
+  short_description: MyText
+  full_description: MyText
