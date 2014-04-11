@@ -23,7 +23,8 @@ module Kook
 
     config.assets.precompile += [
         'application.css.erb'
+        'home.css.scss.erb'
     ]
-    
+
   end
 end
