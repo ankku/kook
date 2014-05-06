@@ -36,6 +36,7 @@
         <td><%= event.price %></td>
         <td><%= event.short_description %></td>
         <td><%= event.full_description %></td>
+        <td><%= link_to "view in gallery", event, { :class => "fancybox", :rel => "zomg_awesome_images" } %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>

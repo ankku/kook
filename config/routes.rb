@@ -1,4 +1,9 @@
 Kook::Application.routes.draw do
+  resources :users
+
+  get "sessions/new"
+  get "sessions/create"
+  get "sessions/destroy"
   resources :events
 
   resources :event_logos

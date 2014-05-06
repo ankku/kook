@@ -3,26 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #top {
-	position: absolute;
-	top: 60px;
-	left: 0px;
 	z-index: -10;
-	width: 100%;
+	max-width: 100%;
+	width: auto\9; /* ie8 */
 	height: 650px;
 	background-image: image_url('front_image.jpg');
-	background-repeat: no-repeat;
-	background-size: contain;
+	background-repeat: no-repeat center fixed;
+	background-size: cover;
 }
 
 #on_image {
 	float: right;
-	margin-top: 200px;
+	margin-top: -450px;
 	color: white;
 }
 
 #how_to {
-	position: absolute;
-	margin-top: 640px;
+	margin-top: 40px;
 	columns: 100px 3;
 	-webkit-columns: 100px 3; /* Safari and Chrome */
 	-moz-columns: 100px 3; /* Firefox */
@@ -31,8 +28,7 @@
 }
 
 footer.controller-home {
-	position: absolute;
-	margin-top:900px;
+	margin-top: 20px;
 	height:50px;
 	width: 100%;
 }
@@ -42,4 +38,13 @@ footer.controller-home {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+#event-link {
+	color: black;
+	text-decoration: none;
+}
+
+#event-link:hover {
+	color: black;
 }

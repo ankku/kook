@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require_fancybox
  *= require_tree .
  */
 
@@ -37,11 +38,30 @@
 }
 
 body {
-	padding-top: 70px;
+	padding-top: 60px;
+	margin: 0px;
 }
 
 #content {
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+
+#events {
+	
+}
+
+#list-event {
+	columns: 70px 5;
+	-webkit-columns: 70px 5; /* Safari and Chrome */
+	-moz-columns: 70px 5; /* Firefox */
+	border: 1px solid;
+	margin-bottom: 5px;
+	padding: 4px;
+}
+
+#list-event:nth-child(even) {
+	background: #E6E6E6;
 }

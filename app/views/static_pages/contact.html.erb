@@ -1,6 +1,51 @@
 <%= stylesheet_link_tag params[:controller], media: "all", "data-turbolinks-track" => true %>
 
 <div id="content">
-<h1>Contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+	<h1>Contact</h1>
+	
+	<p>The cool people behind KÖÖK are</p>
+
+	<table>
+		<TR>
+			<TD>
+	<%= image_tag('face.gif', id: 'people', width: '100') %>
+			</TD>
+			<TD>
+	<h3>Anna Grekula, CEO</h3>
+	<p> Our CEO Anna has a keen eye for the big picture and remembers to whip the whole group into working hard
+		to achieve our goals on time. The heat Anna applies so gently in her baking radiates to her overall enthusiasm.</p>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+	<%= image_tag('face.gif', id: 'people', width: '100') %>
+			</TD>
+			<TD>
+	<h3>Ville Henriksson, CSO</h3>
+	<p> Ville, our visual expert, has an amazing understanding about the street culture and everything relevant. Ville's
+		love for great food and connections it has created, benefits us and you equally.</p>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+	<%= image_tag('face.gif', id: 'people', width: '100') %>
+			</TD>
+			<TD>
+	<h3>Anastasia Lipiäinen, CTO</h3>
+	<p>	Anastasia is the wizard behind this site's design and implementation. Anastasia's enthusiasm to try and learn
+		new things extends from web to the kitchen.</p>
+			</TD>
+		</TR>
+		<TR>
+			<TD>
+	<%= image_tag('face.gif', id: 'people', width: '100') %>
+			</TD>
+			<TD>
+	<h3>Ville E. Virtanen, CFP / VP Sales</h3>
+	<p> VEV is the gang's ninja in business and start-up world. Ville is blinded neither by the shine of money nor
+		the freshly caramelized pork.</p>
+			</TD>
+		</TR>
+	</table>
+
 </div>
