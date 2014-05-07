@@ -49,3 +49,6 @@ ruby "1.9.3"
 
 # Use ActiveModel has_secure_password ➤ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'bcrypt-ruby', '3.1.2'
+
+gem 'fancybox-rails'
+gem 'jquery-turbolinks'

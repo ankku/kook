@@ -10,7 +10,12 @@
 
 	<div id="header">
 		<div id="header_image">
-			<a href="."><%= image_tag "header_logo_w.png" %></a>
+			<a href="/"><%= image_tag "header_logo_w.png" %></a>		
+		</div>
+
+		<div id="header_links">
+			<%= link_to "Join", new_user_path, :class => 'fancybox' %> |
+			<%= link_to "Login", login_path, :class => 'fancybox'  %>
 		</div>
 	</div>
 
