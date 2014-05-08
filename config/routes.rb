@@ -1,21 +1,23 @@
 Kook::Application.routes.draw do
   get 'admin' => 'admin#index'
+  
+  resources :users
+
+  resources :events
+
+  resources :event_logos
+
   controller :sessions do
     get 'login' => :new
     post 'login' => :create
-    delete 'logout' => :destroy
+    get 'logout' => :destroy
   end
 
-
+  resources :sessions
 
   get "sessions/create"
   get "sessions/destroy"
   
-  resources :users
-  
-  resources :events
-
-  resources :event_logos
 
 #  get "static_pages/faq"
 #  get "static_pages/about"

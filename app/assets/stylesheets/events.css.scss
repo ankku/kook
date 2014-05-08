@@ -1,3 +1,31 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#label {
+	font-weight: bold;
+	vertical-align: top;
+}
+
+#fields {
+	width: 400px;
+}
+
+#submit {
+	float: right;
+}
+
+textarea, #event_title, #event_location_city, #event_location_zip {
+	color: grey;
+}
+
+.required :after {
+	color: #DF0101;
+	content: " *";
+	display: inline;
+}

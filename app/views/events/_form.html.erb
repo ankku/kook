@@ -11,55 +11,116 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_area :title %>
+  <table>
+    <tr>
+      <td id="label" class="required">
+        <%= f.label :title %>
+      </td>
+      <td id="fields">
+        <%= f.text_field :title, :required => true, :value => "Give a title to your event",
+            :onblur => 'if (this.value=="") { this.value="Give a title to your event";}',
+            :onclick => 'if (this.value =="Give a title to your event") {this.value = "";}',
+            :size => "74" %>
+      </td>
+    </tr>
+    <tr>
+      <td id="label" class="required">
+        <%= f.label :logo_id, "Event Logo" %>
+      </td>
+      <td id="fields">
+        <%= f.number_field :logo_id %>
+      </td>
+    </tr>
+    <tr>
+      <td id="label" class="required">
+        <%= f.label :short_description %>
+      </td>
+      <td id="fields">
+        <%= f.text_area :short_description, :value => "Write a short description for your event", :onblur => 'if (this.value=="") { this.value="Write a short description for your event";}', :onclick => 'if (this.value =="Write a short description for your event") {this.value = "";}',
+            :rows => "3", :cols => "53" %>
+      </td>
+    </tr>
+    <tr>
+      <td id="label" class="required">
+        <%= f.label :time %>
+      </td>
+      <td id="fields">
+        <table>
+          <tr>
+            <td>
+              <%= f.label :date, "Date" %><br/>
+              <%= f.date_select :date %>
+            </td>
+            <td>
+              <%= f.label :starttime, "Start time" %><br/>
+              <%= f.time_select :starttime %><br/>
+              
+              <%= f.label :endtime, "End time" %><br/>
+              <%= f.time_select :endtime %>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td id="label" class="required">
+        <%= f.label :location %>
+      </td>
+      <td id="fields">
+        <%= f.text_field :location_city, :value => "City",
+            :onblur => 'if (this.value=="") { this.value="City";}',
+            :onclick => 'if (this.value =="City") {this.value = "";}' %>
+        <%= f.text_field :location_zip, :value => "Zip Code",
+            :onblur => 'if (this.value=="") { this.value="Zip Code";}',
+            :onclick => 'if (this.value =="Zip Code") {this.value = "";}' %>
+      </td>
+    </tr>
+    <tr>
+      <td id="label" class="required">
+        <%= f.label :restrictions_id, "Dietary Restrictions" %>
+      </td>
+      <td id="fields">
+        <%= f.number_field :restrictions_id %>
+      </td>
+    </tr>
+    <tr>
+      <td id="label" class="required">
+        <%= f.label :participants, "Amount of participants" %>
+      </td>
+      <td id="fields">
+        <%= f.text_area :participants, :value => "How many seats do you have around your table?",
+            :onblur => 'if (this.value=="") { this.value="How many seats do you have around your table?";}',
+            :onclick => 'if (this.value =="How many seats do you have around your table?") {this.value = "";}',
+            :cols => "53" %>
+      </td>
+    </tr>
+    <tr>
+      <td id="label">
+        <%= f.label :price, "Price / Contribution" %>
+      </td>
+      <td id="fields">
+        <%= f.text_area :price, :value => "Describe how the guests can participate in the costs", 
+            :onblur => 'if (this.value=="") { this.value="Describe how the guests can participate in the costs";}',
+            :onclick => 'if (this.value =="Describe how the guests can participate in the costs") {this.value = "";}',
+             :cols => "53" %>
+      </td>
+    </tr>
+    <tr>
+      <td id="label">
+        <%= f.label :full_description %>
+      </td>
+      <td id="fields">
+        <%= f.text_area :full_description, :value => "Write a longer description for your event",
+            :onblur => 'if (this.value=="") { this.value="Write a longer description for your event";}',
+            :onclick => 'if (this.value =="Write a longer description for your event") {this.value = "";}', 
+            :rows => "8", :cols => "53" %>
+      </td>
   </div>
-  <div class="field">
-    <%= f.label :logo_id %><br>
-    <%= f.number_field :logo_id %>
-  </div>
-  <div class="field">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="field">
-    <%= f.label :starttime %><br>
-    <%= f.time_select :starttime %>
-  </div>
-  <div class="field">
-    <%= f.label :endtime %><br>
-    <%= f.time_select :endtime %>
-  </div>
-  <div class="field">
-    <%= f.label :location_city %><br>
-    <%= f.text_area :location_city %>
-  </div>
-  <div class="field">
-    <%= f.label :location_zip %><br>
-    <%= f.number_field :location_zip %>
-  </div>
-  <div class="field">
-    <%= f.label :restrictions_id %><br>
-    <%= f.number_field :restrictions_id %>
-  </div>
-  <div class="field">
-    <%= f.label :participants %><br>
-    <%= f.text_area :participants %>
-  </div>
-  <div class="field">
-    <%= f.label :price %><br>
-    <%= f.text_area :price %>
-  </div>
-  <div class="field">
-    <%= f.label :short_description %><br>
-    <%= f.text_area :short_description %>
-  </div>
-  <div class="field">
-    <%= f.label :full_description %><br>
-    <%= f.text_area :full_description %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    </tr>
+    <tr>
+      <td></td>
+      <td id="submit"><%= f.submit %></td>
+    </tr>
+  </table>
+  
 <% end %>

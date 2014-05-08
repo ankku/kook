@@ -4,5 +4,5 @@
 
 jQuery ->
 	$('a.fancybox').fancybox({
-		type: "iframe"
+	type: 'iframe'
 	});
