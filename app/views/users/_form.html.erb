@@ -14,26 +14,24 @@
     <% end %>
 
     <fieldset>
-      <legend>Enter User Details</legend>
-
-      <div class="field">
-        <%= f.label :name, 'Name:' %><br>
-        <%= f.text_field :name, size: 40 %>
-      </div>
-
-      <div class="field">
-        <%= f.label :password, 'Password:' %><br>
-        <%= f.password_field :password, size: 40 %>
-      </div>
-
-      <div>
-        <%= f.label :password_confirmation, 'Confirm:' %><br>
-        <%= f.password_field :password_confirmation, size: 40 %>
-      </div>
-
-      <div class="actions">
-        <%= f.submit %>
-      </div>
+      <legend>Enter account information</legend>
+      <table>
+        <tr>
+          <td id="label"><%= f.label :name, 'Name:' %></td>
+          <td><%= f.text_field :name, size: 40 %></td>
+        </tr>
+        <tr>
+          <td id="label"><%= f.label :password, 'Password:' %></td>
+          <td><%= f.password_field :password, size: 40 %></td>
+        </tr>
+        <tr>
+          <td id="label"><%= f.label :password_confirmation, 'Confirm:' %></td>
+          <td><%= f.password_field :password_confirmation, size: 40 %></td>
+        </tr>
+        <tr><td></td>
+          <td id="submit"><%= f.submit %></td>
+        </tr>
+      </table>
 
     </fieldset>
   <% end %>

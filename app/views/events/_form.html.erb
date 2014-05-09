@@ -1,4 +1,4 @@
-<%= form_for(@event) do |f| %>
+<%= form_for @event do |f| %>
   <% if @event.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
@@ -28,7 +28,28 @@
         <%= f.label :logo_id, "Event Logo" %>
       </td>
       <td id="fields">
-        <%= f.number_field :logo_id %>
+        <table>
+          <tr>
+            <td id="food">
+              <%= f.radio_button :logo_id, '0' %>
+              <%= f.label :logo_id, image_tag("0.png", size: "80", id: "food") %>
+            </td>
+            <td id="food">
+              <%= f.radio_button :logo_id, '1' %>
+              <%= f.label :logo_id, image_tag("1.png", size: "80", id: "food") %>
+            </td>
+          </tr>
+          <tr>
+            <td id="food">
+              <%= f.radio_button :logo_id, '2' %>
+              <%= f.label :logo_id, image_tag("2.png", size: "80", id: "food") %>
+            </td>
+            <td id="food">
+              <%= f.radio_button :logo_id, '3' %>
+              <%= f.label :logo_id, image_tag("3.png", size: "80", id: "food") %>
+            </td>
+          </tr>
+        </table>
       </td>
     </tr>
     <tr>

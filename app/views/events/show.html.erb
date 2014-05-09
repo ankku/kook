@@ -7,7 +7,7 @@
 
 <p>
   <strong>Logo:</strong>
-  <%= @event.logo_id %>
+  <%= image_tag(@event.logo_id.to_s + ".png", size: "90") %>
 </p>
 
 <p>

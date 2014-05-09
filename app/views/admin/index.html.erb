@@ -1,2 +1,36 @@
-<h1>Welcome back!</h1>
-<p>Find me in app/views/admin/index.html.erb</p>
+<div id="header">
+		<div id="header_image">
+			<% if session[:user_id] %>
+  				<!-- user is logged in -->
+  				<%= link_to (image_tag("header_logo_w.png")), recommended_url %>
+			<% else %>
+  				<!-- user is not logged in -->
+  				<%= link_to (image_tag("header_logo_w.png")), home_url %>
+			<% end %>
+		</div>
+
+		<div id="header_links">
+			<% if session[:user_id] %>
+  				<!-- user is logged in -->
+  				<%= link_to "Me", user_path(session[:user_id]) %>
+			<% else %>
+  				<!-- user is not logged in -->
+  				<%= link_to "Join", new_user_path, :class => 'fancybox' %>
+			<% end %>
+			|
+			<% if session[:user_id] %>
+  				<!-- user is logged in -->
+  				<%= link_to "Logout", logout_path %>
+			<% else %>
+  				<!-- user is not logged in -->
+  				<%= link_to "Login", login_path, :class => 'fancybox'  %>
+			<% end %>
+			
+		</div>
+	</div>
+
+<div id="content" >
+	<h1>Welcome back!</h1>
+	<p>Find me in app/views/admin/index.html.erb</p>
+
+</div>

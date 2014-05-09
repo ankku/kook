@@ -1,5 +1,45 @@
-<h1>New event</h1>
+<!--<h1>New event</h1>-->
 
-<%= render 'form' %>
+<div id="header">
+	<div id="header_image">
+		<% if session[:user_id] %>
+  			<!-- user is logged in -->
+  			<%= link_to (image_tag("header_logo_w.png")), recommended_url %>
+		<% else %>
+ 			<!-- user is not logged in -->
+  			<%= link_to (image_tag("header_logo_w.png")), home_url %>
+		<% end %>
+	</div>
 
-<%= link_to 'Back', events_path %>
+	<div id="header_links">
+		<% if session[:user_id] %>
+  			<!-- user is logged in -->
+  			<%= link_to "Me", user_path(session[:user_id]) %>
+		<% else %>
+  			<!-- user is not logged in -->
+  			<%= link_to "Join", new_user_path, :class => 'fancybox' %>
+		<% end %>
+		|
+		<% if session[:user_id] %>
+  			<!-- user is logged in -->
+  			<%= link_to "Logout", logout_path %>
+		<% else %>
+  			<!-- user is not logged in -->
+  			<%= link_to "Login", login_path, :class => 'fancybox'  %>
+		<% end %>	
+	</div>
+</div>
+
+<div id="nav">
+	<div id="nav_links">
+		<a href="recommended">RECOMMENDED</a>
+		<a href="browse">BROWSE</a>
+		<a href="my_events">MY EVENTS</a>
+		<a href="">CREATE</a>
+	</div>
+	<hr>
+</div>
+
+<%= render 'events/form' %>
+
+<!--<%= link_to 'Back', events_path %>-->

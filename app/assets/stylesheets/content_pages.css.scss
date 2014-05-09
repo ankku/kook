@@ -1,17 +1,19 @@
-// Place all the styles related to the Admin controller here.
+// Place all the styles related to the ContentPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-footer.controller-admin {
+footer.controller-content_pages {
 	position: absolute;
 	bottom: 0;
 	height: 50px;
 	width: 100%;
 }
 
-#footer_links.controller-admin {
+#footer_links.controller-content_pages {
 	width: 900px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
+
+

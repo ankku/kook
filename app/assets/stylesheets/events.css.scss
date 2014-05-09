@@ -2,6 +2,38 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#nav {
+	margin-top: 70px;
+	height: 50px;
+	width: 100%;
+}
+
+#nav_links {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	display: table;
+}
+
+hr {
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#nav_links a {
+	text-decoration: none;
+	display: table-cell;
+}
+
+#nav_links a:hover {
+	background-color: white;
+	color: black;
+	text-decoration: underline;
+	
+}
+
 table {
 	margin-left: auto;
 	margin-right: auto;
@@ -28,4 +60,16 @@ textarea, #event_title, #event_location_city, #event_location_zip {
 	color: #DF0101;
 	content: " *";
 	display: inline;
+}
+
+footer.controller-events {
+	display: none;
+}
+
+img#food {
+	border: solid 1px;
+}
+
+td#food > * {
+	vertical-align: middle;
 }

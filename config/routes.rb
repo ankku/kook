@@ -1,9 +1,16 @@
 Kook::Application.routes.draw do
+  
+  
   get 'admin' => 'admin#index'
   
   resources :users
 
   resources :events
+
+  match '/recommended' => 'events#recommended', :via => [:get]
+  match '/browse' => 'events#browse', :via => [:get]
+  match '/my_events' => 'events#my_events', :via => [:get]
+  match '/create' => 'events#new', :via => [:get]
 
   resources :event_logos
 
@@ -19,9 +26,6 @@ Kook::Application.routes.draw do
   get "sessions/destroy"
   
 
-#  get "static_pages/faq"
-#  get "static_pages/about"
-#  get "static_pages/contact"
 #  get "home/index"
   root :to => 'home#index', :as => 'home', :action => 'show'
 
