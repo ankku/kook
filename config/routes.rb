@@ -1,9 +1,12 @@
 Kook::Application.routes.draw do
   
-  
+  root :to => 'home#index', :as => 'home', :action => 'show'
+
+
   get 'admin' => 'admin#index'
   
   resources :users
+
 
   resources :events
 
@@ -12,7 +15,15 @@ Kook::Application.routes.draw do
   match '/my_events' => 'events#my_events', :via => [:get]
   match '/create' => 'events#new', :via => [:get]
 
+  resources :events do
+    collection { post :search, to: 'events#browse' }
+  end
+
+
   resources :event_logos
+
+
+  resources :sessions
 
   controller :sessions do
     get 'login' => :new
@@ -20,19 +31,15 @@ Kook::Application.routes.draw do
     get 'logout' => :destroy
   end
 
-  resources :sessions
-
   get "sessions/create"
   get "sessions/destroy"
-  
 
-#  get "home/index"
-  root :to => 'home#index', :as => 'home', :action => 'show'
 
   match '/faq' => 'static_pages#faq', :via => [:get]
   match '/about' => 'static_pages#about', :via => [:get]
   match '/contact' => 'static_pages#contact', :via => [:get]
   
+
   resources :restrictions
 
 

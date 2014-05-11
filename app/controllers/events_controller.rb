@@ -22,9 +22,15 @@ class EventsController < ApplicationController
   end
 
   def recommended
+    @events = Event.all
   end
 
   def browse
+    if params[:search]
+      @events = Event.search(params[:search]).order("created_at DESC")
+    else
+      @events = Event.order("created_at DESC")
+    end
   end
 
   def my_events

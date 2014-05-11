@@ -40,4 +40,25 @@
 
 <div id="content">
 	<p>Here are some interesting events near you. Take a look and attend!</p>
+
+	<div id="events">
+		<% @events.each do |event| %>
+			<div id="list-event">
+				<%= link_to(event, :id => 'event-link', :class => 'fancybox') do %>
+					<div id="link-content">
+					<%= image_tag(event.logo_id.to_s + ".png", size: "90") %>
+					<h3><%= event.title %></h3>
+					<%=sanitize event.short_description %>
+					<br />
+					<%= event.location_city %>
+					<br />
+					<%= event.date %>
+					<%= event.starttime %>
+					<br />
+					<%= event.participants %>
+					</div>
+				<% end %>
+			</div>
+		<% end %>
+	</div>
 </div>

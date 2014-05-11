@@ -52,3 +52,5 @@ gem 'bcrypt-ruby', '3.1.2'
 
 gem 'fancybox-rails'
 gem 'jquery-turbolinks'
+
+gem 'ransack'

@@ -73,3 +73,28 @@ img#food {
 td#food > * {
 	vertical-align: middle;
 }
+
+#two-columns {
+	overflow: hidden;
+	margin-bottom: 60px;
+}
+
+#first, #second {
+	margin-right: 20px;
+	width: 400px;
+	float: left;
+	padding-bottom: 100000px;
+	margin-bottom:  -100000px;
+	text-align: justify;
+}
+
+#first {
+	margin-left: 20px;
+	text-align: center;
+	padding-top: 200px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-weight: bold;
+	background: lightgray;
+}
+
