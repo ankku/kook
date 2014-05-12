@@ -34,6 +34,8 @@ class EventsController < ApplicationController
   end
 
   def my_events
+    @events = Event.all
+    
   end
 
   def organise
@@ -87,6 +89,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :logo_id, :date, :starttime, :endtime, :location_city, :location_zip, :restrictions_id, :participants, :price, :short_description, :full_description)
+      params.require(:event).permit(:title, :logo_id, :date, :starttime, :endtime, :location_city, :location_zip, :restrictions_id, :participants, :price, :short_description, :full_description, :user)
     end
 end

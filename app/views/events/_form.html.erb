@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+  <% if session[:user_id] %>
+        <!-- user is logged in -->
+        <%= f.hidden_field :user, :value => session[:user_id] %>
+  <% end %>
+
   <table>
     <tr>
       <td id="label" class="required">
