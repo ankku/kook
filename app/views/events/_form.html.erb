@@ -17,10 +17,7 @@
         <%= f.label :title %>
       </td>
       <td id="fields">
-        <%= f.text_field :title, :required => true, :value => "Give a title to your event",
-            :onblur => 'if (this.value=="") { this.value="Give a title to your event";}',
-            :onclick => 'if (this.value =="Give a title to your event") {this.value = "";}',
-            :size => "74" %>
+        <%= f.text_field :title, :required => true, placeholder: "Give a title to your event", :size => "74" %>
       </td>
     </tr>
     <tr>
@@ -57,8 +54,7 @@
         <%= f.label :short_description %>
       </td>
       <td id="fields">
-        <%= f.text_area :short_description, :value => "Write a short description for your event", :onblur => 'if (this.value=="") { this.value="Write a short description for your event";}', :onclick => 'if (this.value =="Write a short description for your event") {this.value = "";}',
-            :rows => "3", :cols => "53" %>
+        <%= f.text_area :short_description, placeholder: "Write a short description for your event", :rows => "3", :cols => "53" %>
       </td>
     </tr>
     <tr>
@@ -88,12 +84,8 @@
         Location
       </td>
       <td id="fields">
-        <%= f.text_field :location_city, :value => "City",
-            :onblur => 'if (this.value=="") { this.value="City";}',
-            :onclick => 'if (this.value =="City") {this.value = "";}' %>
-        <%= f.text_field :location_zip, :value => "Zip Code",
-            :onblur => 'if (this.value=="") { this.value="Zip Code";}',
-            :onclick => 'if (this.value =="Zip Code") {this.value = "";}' %>
+        <%= f.text_field :location_city, placeholder: "City" %>
+        <%= f.text_field :location_zip, placeholder: "Zip Code" %>
       </td>
     </tr>
     <tr>
@@ -101,7 +93,25 @@
         <%= f.label :restrictions_id, "Dietary Restrictions" %>
       </td>
       <td id="fields">
-        <%= f.number_field :restrictions_id %>
+        This event is suitable for the following diets:
+        <br/>
+        <%= check_box_tag(:no_red_meat) %>
+        <%= label_tag(:no_red_meat, "No red meat") %>
+        <br/>
+        <%= check_box_tag(:ovo_lacto_vegetarian) %>
+        <%= label_tag(:ovo_lacto_vegetarian, "Ovo-lacto vegetarian") %>
+        <br/>
+        <%= check_box_tag(:vegetarian) %>
+        <%= label_tag(:vegetarian, "Vegetarian") %>
+        <br/>
+        <%= check_box_tag(:vegan) %>
+        <%= label_tag(:vegan, "Vegan") %>
+        <br/>
+        <%= check_box_tag(:glutein_free) %>
+        <%= label_tag(:glutein_free, "Glutein free") %>
+        <br/>
+        <%= check_box_tag(:lactose_free) %>
+        <%= label_tag(:lactose_free, "Lactose free") %>
       </td>
     </tr>
     <tr>
@@ -109,10 +119,7 @@
         <%= f.label :participants, "Amount of participants" %>
       </td>
       <td id="fields">
-        <%= f.text_area :participants, :value => "How many seats do you have around your table?",
-            :onblur => 'if (this.value=="") { this.value="How many seats do you have around your table?";}',
-            :onclick => 'if (this.value =="How many seats do you have around your table?") {this.value = "";}',
-            :cols => "53" %>
+        <%= f.text_area :participants, placeholder: "How many seats do you have around your table?", :cols => "53" %>
       </td>
     </tr>
     <tr>
@@ -120,10 +127,7 @@
         <%= f.label :price, "Price / Contribution" %>
       </td>
       <td id="fields">
-        <%= f.text_area :price, :value => "Describe how the guests can participate in the costs", 
-            :onblur => 'if (this.value=="") { this.value="Describe how the guests can participate in the costs";}',
-            :onclick => 'if (this.value =="Describe how the guests can participate in the costs") {this.value = "";}',
-             :cols => "53" %>
+        <%= f.text_area :price, placeholder: "Describe how the guests can participate in the costs", :cols => "53" %>
       </td>
     </tr>
     <tr>
@@ -131,10 +135,7 @@
         <%= f.label :full_description %>
       </td>
       <td id="fields">
-        <%= f.text_area :full_description, :value => "Write a longer description for your event",
-            :onblur => 'if (this.value=="") { this.value="Write a longer description for your event";}',
-            :onclick => 'if (this.value =="Write a longer description for your event") {this.value = "";}', 
-            :rows => "8", :cols => "53" %>
+        <%= f.text_area :full_description, placeholder: "Write a longer description for your event", :rows => "8", :cols => "53" %>
       </td>
   </div>
     </tr>

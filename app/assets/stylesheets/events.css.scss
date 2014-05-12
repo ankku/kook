@@ -24,6 +24,7 @@ hr {
 
 #nav_links a {
 	text-decoration: none;
+	width: 225px;
 	display: table-cell;
 }
 
@@ -50,10 +51,6 @@ table {
 
 #submit {
 	float: right;
-}
-
-textarea, #event_title, #event_location_city, #event_location_zip {
-	color: grey;
 }
 
 .required :after {
