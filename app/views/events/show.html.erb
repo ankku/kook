@@ -1,69 +1,62 @@
-<p id="notice"><%= notice %></p>
+<table class="show">
+  <tr>
+    <th width="100px"></th>
+    <th width="300px"><h3><%= @event.title %></h3></th>
+    <th width="150px">Seats</th>
+  </tr>
+  <tr>
+    <td width="100px">
+      <%= image_tag(@event.logo_id.to_s + ".png", size: "100") %>
+    </td>
+    <td width="300px">
+      <%= @event.short_description %>
+    </td>
+    <td width="150px">
+      <%= @event.participants %>
+    </td>
+  </tr>
+</table>
 
-<p>
-  <strong>Title:</strong>
-  <%= @event.title %>
-</p>
+<table class="show">
+  <tr>
+    <th><strong>Host</strong></th>
+    <th><strong>Location</strong></th>
+    <th><strong>Date</strong></th>
+    <th><strong>Suitable for</strong></th>
+  </tr>
+  <tr>
+    <td>
+      <%= @event.user %>
+    </td>
+    <td>
+      <%= @event.location_city %>, <%= @event.location_zip %>
+    </td>
+    <td>
+      <%= @event.date.to_s(:long) %><br/>
+      <%= image_tag("time.png") %> <%= @event.starttime.to_s(:time) %>
+    </td>
+    <td>
+      <%= @event.restrictions_id %>
+    </td>
+  </tr>
+</table>
 
-<p>
-  <strong>Logo:</strong>
-  <%= image_tag(@event.logo_id.to_s + ".png", size: "90") %>
-</p>
+<table class="show">
+  <tr>
+    <th width="350px"><strong>Description</strong></th>
+    <th width="200px"><strong>Contribution</strong></th>
+  </tr>
+  <tr>
+    <td width="350px">
+      <%= @event.full_description %>
+    </td>
+    <td width="200px">
+      <%= @event.price %>
+    </td>
+  </tr>
+</table>
 
-<p>
-  <strong>Date:</strong>
-  <%= @event.date %>
-</p>
+<button class="btn" style="float:right;">Attend</button>
 
-<p>
-  <strong>Starttime:</strong>
-  <%= @event.starttime %>
-</p>
-
-<p>
-  <strong>Endtime:</strong>
-  <%= @event.endtime %>
-</p>
-
-<p>
-  <strong>Location city:</strong>
-  <%= @event.location_city %>
-</p>
-
-<p>
-  <strong>Location zip:</strong>
-  <%= @event.location_zip %>
-</p>
-
-<p>
-  <strong>Restrictions:</strong>
-  <%= @event.restrictions_id %>
-</p>
-
-<p>
-  <strong>Participants:</strong>
-  <%= @event.participants %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @event.price %>
-</p>
-
-<p>
-  <strong>Short description:</strong>
-  <%= @event.short_description %>
-</p>
-
-<p>
-  <strong>Full description:</strong>
-  <%= @event.full_description %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @event.user %>
-</p>
-
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to 'Edit', edit_event_path(@event) %>
+<!-- <%= link_to 'Back', events_path %> -->

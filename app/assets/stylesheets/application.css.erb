@@ -64,9 +64,6 @@ body {
 }
 
 #list-event {
-	columns: 70px 5;
-	-webkit-columns: 70px 5; /* Safari and Chrome */
-	-moz-columns: 70px 5; /* Firefox */
 	border: 1px solid;
 	margin-bottom: 5px;
 	padding: 4px;
@@ -77,5 +74,21 @@ body {
 }
 
 #link-content {
-	
+	display: table;
+}
+
+.event-content {
+	width: 180px;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.smaller-event-content {
+	width: 150px;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.row {
+	display: table-row;
 }

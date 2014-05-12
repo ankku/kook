@@ -81,19 +81,30 @@
 			<div id="list-event">
 		  		<div class="events">
 		    		<%= link_to(event, :id => 'event-link', :class => 'fancybox') do %>
-						<div id="link-content">
-						<%= image_tag(event.logo_id.to_s + ".png", size: "90") %>
-						<h3><%= event.title %></h3>
-						<%=sanitize event.short_description %>
-						<br />
-						<%= event.location_city %>
-						<br />
-						<%= event.date %>
-						<%= event.starttime %>
-						<br />
-						<%= event.participants %>
+					<div id="link-content">
+						<div class="event-content">
+							<%= image_tag(event.logo_id.to_s + ".png", size: "90") %>
 						</div>
-					<% end %>
+
+						<div class="event-content">
+							<h3 style="margin-top:0px;margin-bottom:4px;"><%= event.title %></h3>
+							<%=sanitize event.short_description %>
+						</div>
+
+						<div class="event-content">
+							<%= event.location_city %>
+						</div>
+
+						<div class="event-content">
+							<%= event.date.to_s(:long) %><br/>
+							<%= image_tag("time.png") %> <%= event.starttime.to_s(:time) %>
+						</div>
+						
+						<div class="event-content">
+							<%= event.participants %>
+						</div>
+					</div>
+				<% end %>
 		  		</div>
 	  		</div>
 		<% end %>

@@ -35,7 +35,7 @@ class EventsController < ApplicationController
 
   def my_events
     @events = Event.all
-    
+
   end
 
   def organise
@@ -48,7 +48,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to my_events_path, notice: 'Event was successfully created.' }
         format.json { render action: 'show', status: :created, location: @event }
       else
         format.html { render action: 'new' }

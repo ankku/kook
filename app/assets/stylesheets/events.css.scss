@@ -40,6 +40,20 @@ table {
 	margin-right: auto;
 }
 
+table.show {
+	text-align: left;
+	width: 550px;
+	table-layout:fixed;
+}
+
+table.show tr td {
+	vertical-align: baseline;
+	padding: 0px;
+}
+table.show tr td img {
+	vertical-align: top;
+}
+
 #label {
 	font-weight: bold;
 	vertical-align: top;
@@ -73,6 +87,10 @@ td#food > * {
 
 #two-columns {
 	overflow: hidden;
+	margin-bottom: 60px;
+}
+
+#content {
 	margin-bottom: 60px;
 }
 

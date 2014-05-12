@@ -27,7 +27,7 @@
     </tr>
     <tr>
       <td id="label" class="required">
-        <%= f.label :logo_id, "Event Logo" %>
+        <%= f.label :logo_id, "Event Logo", :required => true %>
       </td>
       <td id="fields">
         <table>
@@ -59,7 +59,7 @@
         <%= f.label :short_description %>
       </td>
       <td id="fields">
-        <%= f.text_area :short_description, placeholder: "Write a short description for your event", :rows => "3", :cols => "53" %>
+        <%= f.text_area :short_description, :required => true, placeholder: "Write a short description for your event", :rows => "3", :cols => "53" %>
       </td>
     </tr>
     <tr>
@@ -71,14 +71,14 @@
           <tr>
             <td>
               <%= f.label :date, "Date" %><br/>
-              <%= f.date_select :date %>
+              <%= f.date_select :date, :required => true %>
             </td>
             <td>
               <%= f.label :starttime, "Start time" %><br/>
-              <%= f.time_select :starttime %><br/>
+              <%= f.time_select :starttime, :required => true %><br/>
               
               <%= f.label :endtime, "End time" %><br/>
-              <%= f.time_select :endtime %>
+              <%= f.time_select :endtime, :required => true %>
             </td>
           </tr>
         </table>

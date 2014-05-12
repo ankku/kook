@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   	user = User.find_by_name(params[:name])
   	if user and user.authenticate(params[:password])
   		session[:user_id] = user.id
-  		redirect_to admin_url # use this to redirect the user somewhere after login
+  		redirect_to recommended_path # use this to redirect the user somewhere after login
   	else
   		redirect_to login_url, alert: "Invalid user/password combination"
   	end
